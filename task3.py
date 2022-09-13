@@ -6,7 +6,7 @@ seq_1 = [1, 1, 2, 3, 4, 5, 5]
 
 def non_repeating_list(input_sequence:list):
     res = []
-    l = len(input_sequence)
+    
     input_sequence.sort()
     for i in input_sequence:
         if input_sequence.count(i) > 1: # count считает количество совпадений i в исходном списке

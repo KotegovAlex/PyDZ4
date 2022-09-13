@@ -6,12 +6,13 @@ seq_1 = [1, 1, 2, 3, 4, 5, 5]
 
 def non_repeating_list(input_sequence:list):
     res = []
-   
-    for i in range(1, len(input_sequence) - 1):
-        if (input_sequence[i] == input_sequence[i - 1]) or (input_sequence[i] == input_sequence[i + 1]):
+    l = len(input_sequence)
+    input_sequence.sort()
+    for i in input_sequence:
+        if input_sequence.count(i) > 1: # count считает количество совпадений i в исходном списке
             continue
         else:
-            res.append(input_sequence[i])
+            res.append(i)
     return res
 
 print(non_repeating_list(seq_1))

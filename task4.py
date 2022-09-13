@@ -23,18 +23,18 @@ def create_polynomial(input_degree: int):
             case (0, 0) | (1, 0) | (_, 0):
                 continue
             case (0, _):
-                temp.append(f'{coeff_list[i]} ')
+                temp.append(f'{coeff_list[i]}')
             case (0, 1):
-                temp.append(f'x ')
+                temp.append(f'x')
             case (_, 1):
-                temp.append(f'x**{i} ')
+                temp.append(f'x**{i}')
             case (1, _):
-                temp.append(f'{coeff_list[i]}*x ')
+                temp.append(f'{coeff_list[i]}*x')
             case (_, _):
-                temp.append(f'{coeff_list[i]}*x**{i} ')
+                temp.append(f'{coeff_list[i]}*x**{i}')
     temp.reverse()
     res_string = ' + '.join(temp)
-    res_string += '= 0'
+    res_string += ' = 0'
     print(coeff_list)
     return res_string
 
